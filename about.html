@@ -5,50 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Carthavate</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
-            <div class="logo">
-                <img src="Logo.jpg" alt="Carthavate Logo">
-            </div>
+            <img src="Logo.jpg" alt="Carthavate Logo" class="logo">
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="services.html">Tools</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="kanban.html">Kanban</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="wiki.html">Wiki</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="about-us">
-        <div class="container">
-            <h1>About Us</h1>
-            <p>Carthavate is dedicated to providing top-tier cybersecurity solutions to protect your business in the digital age. Our team of experts has extensive experience in identifying and mitigating cyber threats, ensuring that your assets are always secure.</p>
-            <h2>Our Team</h2>
-            <div class="team">
-                <div class="co-founder">
-                    <img src="path/to/team1.jpg" alt="Team Member">
-                    <h3>Wadi Touil</h3>
-                    <p>CTO</p>
-                </div>
-                <div class="co-founder">
-                    <img src="path/to/team2.jpg" alt="Team Member">
-                    <h3>Ghassen Jamoussi</h3>
-                    <p>CEO</p>
-                </div>
+    <main>
+        <section class="hero small-hero">
+            <div class="container">
+                <h1>About Carthavate</h1>
             </div>
-            <h2>Our Mission</h2>
-            <p>Our mission is to safeguard your digital assets through innovative and reliable cybersecurity solutions. We are committed to providing exceptional service and building long-term relationships with our clients.</        </div>
-    </section>
+        </section>
+        <section class="about">
+            <div class="container">
+                <p>Carthavate is an early-stage startup building a sleek workspace for teams. Our platform helps you capture tasks, collaborate on a Kanban board and keep a shared knowledge base.</p>
+                <h2>Our Team</h2>
+                <div class="team">
+                    <div class="member">
+                        <img src="path/to/team1.jpg" alt="Wadi Touil">
+                        <h3>Wadi Touil</h3>
+                        <p>CTO</p>
+                    </div>
+                    <div class="member">
+                        <img src="path/to/team2.jpg" alt="Ghassen Jamoussi">
+                        <h3>Ghassen Jamoussi</h3>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <h2>Our Mission</h2>
+                <p>Our mission is to craft practical tools—tickets, a Kanban board and a wiki—that keep small teams organized and moving quickly.</p>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="container">
             <p>&copy; 2024 Carthavate. All rights reserved.</p>
             <ul>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </footer>
