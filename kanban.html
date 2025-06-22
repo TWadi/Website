@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carthavate | Cybersecurity Solutions</title>
+    <title>Kanban Board | Carthavate</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,28 +23,21 @@
             </nav>
         </div>
     </header>
-    <section class="hero">
+    <section class="kanban">
         <div class="container">
-            <h1>Protect Your Business with Top-Tier Cybersecurity Solutions</h1>
-            <p>Your safety is our priority. Let us safeguard your digital assets.</p>
-            <a href="contact.html" class="cta-button">Get a Free Consultation</a>
-        </div>
-    </section>
-    <section class="services-overview">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Penetration Testing</h3>
-                    <p>Identify vulnerabilities before they become threats.</p>
+            <h1>Kanban Board</h1>
+            <div class="kanban-container">
+                <div class="kanban-column" id="todo">
+                    <h2>To Do</h2>
+                    <div class="task">Sample Task 1</div>
+                    <div class="task">Sample Task 2</div>
                 </div>
-                <div class="service">
-                    <h3>Threat Analysis</h3>
-                    <p>Stay ahead of potential risks with our expert analysis.</p>
+                <div class="kanban-column" id="in-progress">
+                    <h2>In Progress</h2>
+                    <div class="task">Sample Task 3</div>
                 </div>
-                <div class="service">
-                    <h3>Incident Response</h3>
-                    <p>Swift and effective solutions to cybersecurity incidents.</p>
+                <div class="kanban-column" id="done">
+                    <h2>Done</h2>
                 </div>
             </div>
         </div>
@@ -59,5 +52,6 @@
             </ul>
         </div>
     </footer>
+    <script src="kanban.js"></script>
 </body>
 </html>

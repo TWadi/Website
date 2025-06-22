@@ -195,3 +195,39 @@ form button {
 form button:hover {
     background: #001233;
 }
+/* Kanban board styles */
+.kanban-container {
+    display: flex;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.kanban-column {
+    flex: 1;
+    background: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 300px;
+}
+
+.kanban-column h2 {
+    text-align: center;
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.task {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: grab;
+}
+
+.task.dragging {
+    opacity: 0.5;
+}
