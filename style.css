@@ -63,6 +63,7 @@ h1, h2, h3 {
     background: var(--primary);
     color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #dfe1e6;
 }
 
 .site-header .container {
@@ -83,7 +84,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 3px;
