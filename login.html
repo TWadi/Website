@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carthavate | Startup Workspace</title>
+    <title>Login | Carthavate</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -26,30 +26,22 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero small-hero">
             <div class="container">
-                <h1>Welcome to Carthavate</h1>
-                <p>A simple workspace for tracking tasks and documenting ideas.</p>
-                <a href="login.html" class="button">Sign In</a>
+                <h1>Account Login</h1>
             </div>
         </section>
-        <section class="highlights">
+        <section class="login">
             <div class="container">
-                <h2>Workspace Features</h2>
-                <div class="cards">
-                    <article class="card">
-                        <h3>Ticket System</h3>
-                        <p>Create and manage work items for any project.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Kanban Board</h3>
-                        <p>Organize tasks visually with simple drag and drop.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Wiki</h3>
-                        <p>Store documentation and notes in one convenient place.</p>
-                    </article>
-                </div>
+                <form action="#" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <label for="code">Authenticator Code</label>
+                    <input type="text" id="code" required>
+                    <button type="submit">Log In</button>
+                </form>
             </div>
         </section>
     </main>
