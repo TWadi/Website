@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carthavate | Startup Workspace</title>
+    <title>Tickets | Carthavate</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -26,30 +26,35 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero small-hero">
             <div class="container">
-                <h1>Carthavate Workspace</h1>
-                <p>Streamline projects with agile tickets, a drag-and-drop board and a collaborative wiki.</p>
-                <a href="login.html" class="button">Get Started</a>
+                <h1>Ticket System</h1>
             </div>
         </section>
-        <section class="highlights">
+        <section class="tickets">
             <div class="container">
-                <h2>Key Features</h2>
-                <div class="cards">
-                    <article class="card">
-                        <h3>Ticket System</h3>
-                        <p>Track issues and requests with ease.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Kanban Board</h3>
-                        <p>Manage progress visually with flexible drag and drop.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Wiki</h3>
-                        <p>Share knowledge through a centralized wiki.</p>
-                    </article>
+                <div class="add-task">
+                    <input type="text" id="new-ticket" placeholder="New ticket">
+                    <button id="add-ticket">Add Ticket</button>
                 </div>
+                <table id="ticket-table">
+                    <thead>
+                        <tr>
+                            <th>Ticket</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Set up repository</td>
+                            <td><button class="delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Create initial roadmap</td>
+                            <td><button class="delete">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
@@ -63,5 +68,6 @@
             </ul>
         </div>
     </footer>
+    <script src="tickets.js"></script>
 </body>
 </html>

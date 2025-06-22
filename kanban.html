@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carthavate | Startup Workspace</title>
+    <title>Kanban Board | Carthavate</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -26,29 +26,30 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero small-hero">
             <div class="container">
-                <h1>Carthavate Workspace</h1>
-                <p>Streamline projects with agile tickets, a drag-and-drop board and a collaborative wiki.</p>
-                <a href="login.html" class="button">Get Started</a>
+                <h1>Project Kanban Board</h1>
             </div>
         </section>
-        <section class="highlights">
+        <section class="kanban-board">
             <div class="container">
-                <h2>Key Features</h2>
-                <div class="cards">
-                    <article class="card">
-                        <h3>Ticket System</h3>
-                        <p>Track issues and requests with ease.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Kanban Board</h3>
-                        <p>Manage progress visually with flexible drag and drop.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Wiki</h3>
-                        <p>Share knowledge through a centralized wiki.</p>
-                    </article>
+                <div class="add-task">
+                    <input type="text" id="new-task" placeholder="New task">
+                    <button id="add-task">Add Task</button>
+                </div>
+                <div class="kanban-container">
+                    <div class="kanban-column" id="todo">
+                        <h2>To Do</h2>
+                        <div class="task">Draft project vision</div>
+                        <div class="task">Set up continuous integration</div>
+                    </div>
+                    <div class="kanban-column" id="in-progress">
+                        <h2>In Progress</h2>
+                        <div class="task">Design database schema</div>
+                    </div>
+                    <div class="kanban-column" id="done">
+                        <h2>Done</h2>
+                    </div>
                 </div>
             </div>
         </section>
@@ -63,5 +64,6 @@
             </ul>
         </div>
     </footer>
+    <script src="kanban.js"></script>
 </body>
 </html>

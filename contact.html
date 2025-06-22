@@ -5,45 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Carthavate</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
-            <div class="logo">
-                <img src="Logo.jpg" alt="Carthavate Logo">
-            </div>
+            <img src="Logo.jpg" alt="Carthavate Logo" class="logo">
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="services.html">Tools</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="kanban.html">Kanban</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="wiki.html">Wiki</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="contact-us">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Please fill out the form below to get in touch with us.</p>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+    <main>
+        <section class="hero small-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <p>We’d love to hear from you. Send us a message and we’ll respond shortly.</p>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="container">
             <p>&copy; 2024 Carthavate. All rights reserved.</p>
             <ul>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </footer>

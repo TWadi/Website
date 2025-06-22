@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carthavate | Startup Workspace</title>
+    <title>Login | Carthavate</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -26,30 +26,22 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero small-hero">
             <div class="container">
-                <h1>Carthavate Workspace</h1>
-                <p>Streamline projects with agile tickets, a drag-and-drop board and a collaborative wiki.</p>
-                <a href="login.html" class="button">Get Started</a>
+                <h1>Account Login</h1>
             </div>
         </section>
-        <section class="highlights">
+        <section class="login">
             <div class="container">
-                <h2>Key Features</h2>
-                <div class="cards">
-                    <article class="card">
-                        <h3>Ticket System</h3>
-                        <p>Track issues and requests with ease.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Kanban Board</h3>
-                        <p>Manage progress visually with flexible drag and drop.</p>
-                    </article>
-                    <article class="card">
-                        <h3>Wiki</h3>
-                        <p>Share knowledge through a centralized wiki.</p>
-                    </article>
-                </div>
+                <form action="#" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <label for="code">Authenticator Code</label>
+                    <input type="text" id="code" required>
+                    <button type="submit">Log In</button>
+                </form>
             </div>
         </section>
     </main>
