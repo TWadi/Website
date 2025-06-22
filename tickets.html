@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Carthavate</title>
+    <title>Tickets | Carthavate</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
@@ -28,27 +28,24 @@
     <main>
         <section class="hero small-hero">
             <div class="container">
-                <h1>About Carthavate</h1>
+                <h1>Ticket System</h1>
             </div>
         </section>
-        <section class="about">
+        <section class="tickets">
             <div class="container">
-                <p>Carthavate is an early-stage startup where we experiment and learn. This site acts as our shared hub for tracking work, documenting ideas and planning new adventures.</p>
-                <h2>Our Team</h2>
-                <div class="team">
-                    <div class="member">
-                        <img src="path/to/team1.jpg" alt="Wadi Touil">
-                        <h3>Wadi Touil</h3>
-                        <p>CTO</p>
-                    </div>
-                    <div class="member">
-                        <img src="path/to/team2.jpg" alt="Ghassen Jamoussi">
-                        <h3>Ghassen Jamoussi</h3>
-                        <p>CEO</p>
-                    </div>
+                <div class="add-task">
+                    <input type="text" id="new-ticket" placeholder="New ticket">
+                    <button id="add-ticket">Add Ticket</button>
                 </div>
-                <h2>Our Mission</h2>
-                <p>We're still figuring things out! For now we focus on building a simple toolkit—ticketing, kanban and a wiki—to organize our projects and grow together.</p>
+                <table id="ticket-table">
+                    <thead>
+                        <tr><th>Ticket</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Set up repository</td></tr>
+                        <tr><td>Create initial roadmap</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
@@ -62,6 +59,18 @@
             </ul>
         </div>
     </footer>
+    <script>
+        const btn = document.getElementById('add-ticket');
+        const table = document.getElementById('ticket-table').querySelector('tbody');
+        btn.addEventListener('click', () => {
+            const input = document.getElementById('new-ticket');
+            const text = input.value.trim();
+            if (!text) return;
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${text}</td>`;
+            table.appendChild(row);
+            input.value = '';
+        });
+    </script>
 </body>
 </html>
-

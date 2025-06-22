@@ -241,3 +241,16 @@ form button:hover {
 .add-task button:hover {
     background: #148cd8;
 }
+
+.tickets table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tickets th,
+.tickets td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
