@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Carthavate</title>
+    <title>Kanban Board | Carthavate</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,25 +23,23 @@
             </nav>
         </div>
     </header>
-    <section class="about-us">
+    <section class="kanban">
         <div class="container">
-            <h1>About Carthavate</h1>
-            <p>Carthavate delivers best-in-class cybersecurity services that empower organizations to operate with confidence. Our seasoned professionals bring deep expertise in threat detection, risk mitigation and incident response.</p>
-            <h2>Our Team</h2>
-            <div class="team">
-                <div class="co-founder">
-                    <img src="path/to/team1.jpg" alt="Team Member">
-                    <h3>Wadi Touil</h3>
-                    <p>CTO</p>
+            <h1>Project Kanban Board</h1>
+            <div class="kanban-container">
+                <div class="kanban-column" id="todo">
+                    <h2>To Do</h2>
+                    <div class="task">Implement authentication</div>
+                    <div class="task">Set up continuous integration</div>
                 </div>
-                <div class="co-founder">
-                    <img src="path/to/team2.jpg" alt="Team Member">
-                    <h3>Ghassen Jamoussi</h3>
-                    <p>CEO</p>
+                <div class="kanban-column" id="in-progress">
+                    <h2>In Progress</h2>
+                    <div class="task">Perform security audit</div>
+                </div>
+                <div class="kanban-column" id="done">
+                    <h2>Done</h2>
                 </div>
             </div>
-            <h2>Our Mission</h2>
-            <p>We aim to build enduring partnerships by providing innovative and reliable security solutions. Through strategic guidance and proven expertise, we help clients stay resilient in an ever-evolving threat landscape.</p>
         </div>
     </section>
     <footer>
@@ -54,5 +52,6 @@
             </ul>
         </div>
     </footer>
+    <script src="kanban.js"></script>
 </body>
 </html>
