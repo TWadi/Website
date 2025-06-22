@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const STORAGE_KEY = 'kanbanBoard';
-    let draggedTask = null;
 
     function attachDragEvents(task) {
         task.draggable = true;
