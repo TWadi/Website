@@ -39,20 +39,11 @@
                 </div>
                 <table id="ticket-table">
                     <thead>
-                        <tr>
-                            <th>Ticket</th>
-                            <th>Actions</th>
-                        </tr>
+                        <tr><th>Ticket</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Set up repository</td>
-                            <td><button class="delete">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>Create initial roadmap</td>
-                            <td><button class="delete">Delete</button></td>
-                        </tr>
+                        <tr><td>Set up repository</td></tr>
+                        <tr><td>Create initial roadmap</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -68,6 +59,18 @@
             </ul>
         </div>
     </footer>
-    <script src="tickets.js"></script>
+    <script>
+        const btn = document.getElementById('add-ticket');
+        const table = document.getElementById('ticket-table').querySelector('tbody');
+        btn.addEventListener('click', () => {
+            const input = document.getElementById('new-ticket');
+            const text = input.value.trim();
+            if (!text) return;
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${text}</td>`;
+            table.appendChild(row);
+            input.value = '';
+        });
+    </script>
 </body>
 </html>

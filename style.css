@@ -264,6 +264,3 @@ form button:hover {
     cursor: pointer;
 }
 
-.tickets button.delete:hover {
-    background: #cf3a2c;
-}
