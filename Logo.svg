@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="12" width="40" height="40" rx="8" fill="#101622" stroke="#00FFC6" stroke-width="2"/>
+  <rect x="22" y="22" width="20" height="20" rx="4" fill="#1A2233" stroke="#00FFC6" stroke-width="1.5"/>
+  <rect x="28" y="28" width="8" height="8" rx="2" fill="#00FFC6"/>
+  <!-- Pins -->
+  <rect x="30" y="2" width="4" height="8" rx="2" fill="#00FFC6"/>
+  <rect x="30" y="54" width="4" height="8" rx="2" fill="#00FFC6"/>
+  <rect x="2" y="30" width="8" height="4" rx="2" fill="#00FFC6"/>
+  <rect x="54" y="30" width="8" height="4" rx="2" fill="#00FFC6"/>
+  <!-- Corners -->
+  <rect x="7" y="7" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5"/>
+  <rect x="51" y="7" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5"/>
+  <rect x="7" y="51" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5"/>
+  <rect x="51" y="51" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5"/>
+</svg> 

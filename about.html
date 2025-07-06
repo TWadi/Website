@@ -3,53 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Carthavate</title>
+    <title>About Me | Wadi Touil</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="circuit-bg"></div>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Logo.jpg" alt="Carthavate Logo">
+                <img src="Logo.svg" alt="Embedded Microchip Logo">
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="about-us">
-        <div class="container">
-            <h1>About Us</h1>
-            <p>Carthavate is dedicated to providing top-tier cybersecurity solutions to protect your business in the digital age. Our team of experts has extensive experience in identifying and mitigating cyber threats, ensuring that your assets are always secure.</p>
-            <h2>Our Team</h2>
-            <div class="team">
-                <div class="co-founder">
-                    <img src="path/to/team1.jpg" alt="Team Member">
-                    <h3>Wadi Touil</h3>
-                    <p>CTO</p>
+    <main>
+        <section class="about-main">
+            <div class="container">
+                <div class="about-avatar-large">
+                    <img src="Logo.svg" alt="Embedded Microchip Logo" class="profile-pic-large">
                 </div>
-                <div class="co-founder">
-                    <img src="path/to/team2.jpg" alt="Team Member">
-                    <h3>Ghassen Jamoussi</h3>
-                    <p>CEO</p>
+                <div class="about-bio">
+                    <h1>About Me</h1>
+                    <p>Hi, I'm <strong>Wadi Touil</strong>, an Embedded Systems and C++ Engineer based in Berlin. I'm passionate about building robust, efficient, and innovative embedded solutions. My experience spans audio systems, static analysis, and IoT. I thrive at the intersection of hardware and software, and I'm always eager to learn and grow.</p>
+                    <p>Currently, I'm a working student at <strong>Expleo</strong> (static analysis for embedded software) and previously at <strong>Lautsprecher Teufel</strong> (C++ audio systems). I'm about to finish my B.Sc. in Technische Informatik at BHT Berlin.</p>
                 </div>
+                <div class="about-skills">
+                    <h2>Core Skills</h2>
+                    <div class="skills-list">
+                        <div class="skill-bar"><span>C++</span><div class="bar"><div class="fill cpp"></div></div></div>
+                        <div class="skill-bar"><span>Embedded Systems</span><div class="bar"><div class="fill embedded"></div></div></div>
+                        <div class="skill-bar"><span>Static Analysis</span><div class="bar"><div class="fill static"></div></div></div>
+                        <div class="skill-bar"><span>RTOS</span><div class="bar"><div class="fill rtos"></div></div></div>
+                        <div class="skill-bar"><span>Microcontrollers</span><div class="bar"><div class="fill mcu"></div></div></div>
+                        <div class="skill-bar"><span>Python</span><div class="bar"><div class="fill python"></div></div></div>
+                    </div>
+                </div>
+                <div class="about-timeline">
+                    <h2>Experience Timeline</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Expleo</h3>
+                                <span class="timeline-date">2022–Present</span>
+                                <p>Working student (Static Analysis): Automated code checks and improved code safety for embedded projects.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Lautsprecher Teufel</h3>
+                                <span class="timeline-date">2021–2023</span>
+                                <p>Working student (C++): Developed embedded audio software for consumer electronics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="index.html" class="cta-button secondary">&larr; Back to Home</a>
             </div>
-            <h2>Our Mission</h2>
-            <p>Our mission is to safeguard your digital assets through innovative and reliable cybersecurity solutions. We are committed to providing exceptional service and building long-term relationships with our clients.</        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Carthavate. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+            <p>&copy; 2024 Wadi Touil. All rights reserved.</p>
         </div>
     </footer>
 </body>

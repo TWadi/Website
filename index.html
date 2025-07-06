@@ -3,60 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carthavate | Cybersecurity Solutions</title>
+    <title>Wadi Touil | Embedded & C++ Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="circuit-bg"></div>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Logo.jpg" alt="Carthavate Logo">
+                <img src="Logo.svg" alt="Embedded Microchip Logo" aria-label="Embedded Microchip Logo">
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="hero">
-        <div class="container">
-            <h1>Protect Your Business with Top-Tier Cybersecurity Solutions</h1>
-            <p>Your safety is our priority. Let us safeguard your digital assets.</p>
-            <a href="contact.html" class="cta-button">Get a Free Consultation</a>
-        </div>
-    </section>
-    <section class="services-overview">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Penetration Testing</h3>
-                    <p>Identify vulnerabilities before they become threats.</p>
-                </div>
-                <div class="service">
-                    <h3>Threat Analysis</h3>
-                    <p>Stay ahead of potential risks with our expert analysis.</p>
-                </div>
-                <div class="service">
-                    <h3>Incident Response</h3>
-                    <p>Swift and effective solutions to cybersecurity incidents.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <img src="Logo.svg" alt="Embedded Microchip Logo" class="hero-logo">
+                <h1 class="animated-hero">Wadi Touil</h1>
+                <h2 class="animated-hero-sub">Embedded Systems & C++ Engineer</h2>
+                <p class="animated-hero-desc">Turning ideas into robust, real-time embedded solutions. Passionate about C++, microcontrollers, and innovation.</p>
+                <a href="#projects" class="cta-button">See My Work</a>
+            </div>
+        </section>
+        <!-- About Preview -->
+        <section class="about-preview" id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-preview-content">
+                    <img src="Logo.svg" alt="Embedded Microchip Logo" class="profile-pic">
+                    <p>Embedded Systems & C++ Engineer based in Berlin. Experienced in audio systems, static analysis, and IoT. <a href="about.html">Read more &rarr;</a></p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Skills Preview -->
+        <section class="skills-preview" id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <div class="skill-bar"><span>C++</span><div class="bar"><div class="fill cpp"></div></div></div>
+                    <div class="skill-bar"><span>Embedded Systems</span><div class="bar"><div class="fill embedded"></div></div></div>
+                    <div class="skill-bar"><span>Static Analysis</span><div class="bar"><div class="fill static"></div></div></div>
+                    <div class="skill-bar"><span>RTOS</span><div class="bar"><div class="fill rtos"></div></div></div>
+                    <div class="skill-bar"><span>Microcontrollers</span><div class="bar"><div class="fill mcu"></div></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Preview -->
+        <section class="projects-preview" id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">🔊</div>
+                        <h3>Audio DSP Module</h3>
+                        <p>Real-time audio processing in C++ for embedded speakers.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">🛡️</div>
+                        <h3>Static Analysis Automation</h3>
+                        <p>Automated static code analysis for embedded C/C++ projects.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">📡</div>
+                        <h3>IoT Sensor Node</h3>
+                        <p>Low-power STM32 sensor node with FreeRTOS and MQTT.</p>
+                    </div>
+                </div>
+                <a href="projects.html" class="cta-button secondary">See All Projects</a>
+            </div>
+        </section>
+        <!-- Contact Preview -->
+        <section class="contact-preview" id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Want to work together or have a question? <a href="contact.html">Get in touch &rarr;</a></p>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Carthavate. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+            <p>&copy; 2024 Wadi Touil. All rights reserved.</p>
         </div>
     </footer>
 </body>
 </html>
+

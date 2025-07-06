@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Carthavate</title>
+    <title>Projects | Wadi Touil</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="circuit-bg"></div>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Logo.jpg" alt="Carthavate Logo">
+                <img src="Logo.svg" alt="Embedded Microchip Logo">
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="services">
-        <div class="container">
-            <h1>Our Services</h1>
-            <div class="service-detail">
-                <h2>Penetration Testing</h2>
-                <p>Identify and address security vulnerabilities before they can be exploited. Our expert team uses advanced techniques to simulate real-world attacks and provide actionable insights.</p>
+    <main>
+        <section class="projects-main">
+            <div class="container">
+                <h1>Projects</h1>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">🔊</div>
+                        <h3>Audio DSP Module</h3>
+                        <p>Real-time audio processing in C++ for embedded speakers.</p>
+                        <div class="project-tech">C++, Embedded, Audio, RTOS</div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">🛡️</div>
+                        <h3>Static Analysis Automation</h3>
+                        <p>Automated static code analysis for embedded C/C++ projects.</p>
+                        <div class="project-tech">C++, Python, Static Analysis</div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">📡</div>
+                        <h3>IoT Sensor Node</h3>
+                        <p>Low-power STM32 sensor node with FreeRTOS and MQTT.</p>
+                        <div class="project-tech">STM32, FreeRTOS, MQTT, C</div>
+                    </div>
+                </div>
+                <a href="index.html" class="cta-button secondary">&larr; Back to Home</a>
             </div>
-            <div class="service-detail">
-                <h2>Threat Analysis</h2>
-                <p>Stay ahead of potential threats with our comprehensive threat analysis services. We monitor and analyze emerging threats to help you proactively protect your assets.</p>
-            </div>
-            <div class="service-detail">
-                <h2>Incident Response</h2>
-                <p>Swift and effective incident response to minimize damage and downtime. Our team is ready to respond to cybersecurity incidents and restore your operations quickly.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Carthavate. All rights reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+            <p>&copy; 2024 Wadi Touil. All rights reserved.</p>
         </div>
     </footer>
 </body>
