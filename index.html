@@ -9,7 +9,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="circuit-bg"></div>
+    <div class="circuit-bg" aria-hidden="true"></div>
+    <div id="retro-overlay" aria-hidden="true"></div>
     <header>
         <div class="container">
             <div class="logo">
@@ -24,17 +25,91 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button id="retro-toggle" aria-label="Toggle Retro Mode" title="Retro Mode">🖥️</button>
         </div>
     </header>
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section with Data Packets, Microchip, Oscilloscope, Parallax -->
         <section class="hero" id="hero">
+            <!-- Parallax/Neon/Glass Layers -->
+            <div class="hero-parallax" aria-hidden="true">
+                <div class="parallax-layer neon-circuit" data-depth="0.2">
+                    <svg id="data-circuit" width="100%" height="180" viewBox="0 0 1200 180" aria-hidden="true">
+                        <polyline points="0,90 200,90 300,30 400,150 600,90 800,30 1000,150 1200,90" stroke="#00ffc6" stroke-width="4" fill="none"/>
+                        <!-- Data packets will be animated by JS -->
+                        <circle class="data-packet" r="10" fill="#00ffc6" opacity="0.7" />
+                    </svg>
+                </div>
+                <div class="parallax-layer glass-bg" data-depth="0.05"></div>
+                <div class="parallax-layer neon-glow" data-depth="0.1"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="microchip-hero" aria-label="Animated Microchip">
+                    <svg id="hero-microchip" width="180" height="180" viewBox="0 0 80 80" aria-label="3D Microchip">
+                        <!-- 3D illusion base -->
+                        <rect x="10" y="10" width="60" height="60" rx="12" fill="#101622" stroke="#00FFC6" stroke-width="2" filter="url(#chipShadow)"/>
+                        <rect x="22" y="22" width="36" height="36" rx="6" fill="#1A2233" stroke="#00FFC6" stroke-width="1.5"/>
+                        <rect x="34" y="34" width="12" height="12" rx="3" fill="#00FFC6" class="chip-heartbeat"/>
+                        <!-- Animated traces (JS will animate stroke-dasharray) -->
+                        <polyline class="chip-trace" points="40,40 40,5" stroke="#00ffc6" stroke-width="2" fill="none"/>
+                        <polyline class="chip-trace" points="40,40 75,40" stroke="#00ffc6" stroke-width="2" fill="none"/>
+                        <polyline class="chip-trace" points="40,40 40,75" stroke="#00ffc6" stroke-width="2" fill="none"/>
+                        <polyline class="chip-trace" points="40,40 5,40" stroke="#00ffc6" stroke-width="2" fill="none"/>
+                        <!-- Pins with tooltips and click/hover interactivity -->
+                        <rect x="38" y="0" width="4" height="10" rx="2" fill="#00FFC6" class="mcu-pin" data-tooltip="VCC"/>
+                        <rect x="38" y="70" width="4" height="10" rx="2" fill="#00FFC6" class="mcu-pin" data-tooltip="GND"/>
+                        <rect x="0" y="38" width="10" height="4" rx="2" fill="#00FFC6" class="mcu-pin" data-tooltip="UART TX"/>
+                        <rect x="70" y="38" width="10" height="4" rx="2" fill="#00FFC6" class="mcu-pin" data-tooltip="UART RX"/>
+                        <rect x="8" y="8" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5" class="mcu-pin" data-tooltip="SPI SCK"/>
+                        <rect x="66" y="8" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5" class="mcu-pin" data-tooltip="SPI MISO"/>
+                        <rect x="8" y="66" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5" class="mcu-pin" data-tooltip="I2C SDA"/>
+                        <rect x="66" y="66" width="6" height="6" rx="2" fill="#00FFC6" opacity="0.5" class="mcu-pin" data-tooltip="I2C SCL"/>
+                        <!-- More pins for wild effect -->
+                        <rect x="24" y="0" width="4" height="8" rx="2" fill="#00FFC6" opacity="0.4" class="mcu-pin" data-tooltip="ADC IN"/>
+                        <rect x="52" y="0" width="4" height="8" rx="2" fill="#00FFC6" opacity="0.4" class="mcu-pin" data-tooltip="PWM OUT"/>
+                        <rect x="0" y="24" width="8" height="4" rx="2" fill="#00FFC6" opacity="0.4" class="mcu-pin" data-tooltip="CAN TX"/>
+                        <rect x="0" y="52" width="8" height="4" rx="2" fill="#00FFC6" opacity="0.4" class="mcu-pin" data-tooltip="CAN RX"/>
+                        <rect x="72" y="24" width="8" height="4" rx="2" fill="#00FFC6" opacity="0.4" class="mcu-pin" data-tooltip="SWDIO"/>
+                        <rect x="72" y="52" width="8" height="4" rx="2" fill="#00FFC6" opacity="0.4" class="mcu-pin" data-tooltip="SWCLK"/>
+                        <!-- Status LEDs -->
+                        <circle cx="20" cy="20" r="5" class="status-led led-green"/>
+                        <circle cx="60" cy="20" r="5" class="status-led led-yellow"/>
+                        <circle cx="20" cy="60" r="5" class="status-led led-red"/>
+                        <circle cx="60" cy="60" r="5" class="status-led led-blue"/>
+                        <defs>
+                            <filter id="chipShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#00ffc6"/>
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div id="mcu-tooltip" class="mcu-tooltip"></div>
+                </div>
+                <div class="hero-text">
+                    <div class="typewriter-container">
+                        <h1 class="animated-hero typewriter" id="hero-title">Wadi Touil</h1>
+                        <h2 class="animated-hero-sub typewriter" id="hero-sub">Embedded Systems & C++ Engineer</h2>
+                        <span class="typewriter-cursor">█</span>
+                    </div>
+                    <p class="animated-hero-desc">Turning ideas into robust, real-time embedded solutions. Passionate about C++, microcontrollers, and innovation.</p>
+                    <a href="#projects" class="cta-button">See My Work</a>
+                    <button id="theme-toggle" class="power-toggle" title="Power Cycle Theme" aria-label="Toggle Theme">
+                        <span class="power-icon">⏻</span>
+                    </button>
+                </div>
+                <div class="oscilloscope-container">
+                    <svg id="oscilloscope" width="100%" height="80" viewBox="0 0 600 80" aria-label="Oscilloscope Waveform"></svg>
+                </div>
+                <!-- Hidden clickable area for hex dump/disassembly Easter egg -->
+                <div id="hex-easter-egg" style="position:absolute;top:0;right:0;width:40px;height:40px;opacity:0;cursor:pointer;z-index:10;" title="?"></div>
+            </div>
+        </section>
+        <!-- Live Terminal Widget -->
+        <section class="terminal-section">
             <div class="container">
-                <img src="Logo.svg" alt="Embedded Microchip Logo" class="hero-logo">
-                <h1 class="animated-hero">Wadi Touil</h1>
-                <h2 class="animated-hero-sub">Embedded Systems & C++ Engineer</h2>
-                <p class="animated-hero-desc">Turning ideas into robust, real-time embedded solutions. Passionate about C++, microcontrollers, and innovation.</p>
-                <a href="#projects" class="cta-button">See My Work</a>
+                <div class="live-terminal" id="live-terminal">
+                    <div class="terminal-header">UART/Serial Monitor</div>
+                    <pre id="terminal-output"></pre>
+                </div>
             </div>
         </section>
         <!-- About Preview -->
@@ -47,38 +122,80 @@
                 </div>
             </div>
         </section>
-        <!-- Skills Preview -->
+        <!-- Skills Preview with Status LEDs and Microcontroller SVG -->
         <section class="skills-preview" id="skills">
             <div class="container">
                 <h2>Skills</h2>
                 <div class="skills-list">
-                    <div class="skill-bar"><span>C++</span><div class="bar"><div class="fill cpp"></div></div></div>
-                    <div class="skill-bar"><span>Embedded Systems</span><div class="bar"><div class="fill embedded"></div></div></div>
-                    <div class="skill-bar"><span>Static Analysis</span><div class="bar"><div class="fill static"></div></div></div>
-                    <div class="skill-bar"><span>RTOS</span><div class="bar"><div class="fill rtos"></div></div></div>
-                    <div class="skill-bar"><span>Microcontrollers</span><div class="bar"><div class="fill mcu"></div></div></div>
+                    <div class="skill-bar"><span>C++</span><div class="status-led led-green" title="Expert"></div><div class="bar"><div class="fill cpp"></div></div></div>
+                    <div class="skill-bar"><span>Embedded Systems</span><div class="status-led led-green" title="Expert"></div><div class="bar"><div class="fill embedded"></div></div></div>
+                    <div class="skill-bar"><span>Static Analysis</span><div class="status-led led-yellow" title="Advanced"></div><div class="bar"><div class="fill static"></div></div></div>
+                    <div class="skill-bar"><span>RTOS</span><div class="status-led led-yellow" title="Advanced"></div><div class="bar"><div class="fill rtos"></div></div></div>
+                    <div class="skill-bar"><span>Microcontrollers</span><div class="status-led led-green" title="Expert"></div><div class="bar"><div class="fill mcu"></div></div></div>
+                </div>
+                <div class="mcu-svg-container">
+                    <svg id="mcu-svg" width="320" height="120" viewBox="0 0 320 120">
+                        <rect x="60" y="20" width="200" height="80" rx="16" fill="#181f2e" stroke="#00ffc6" stroke-width="3"/>
+                        <rect x="140" y="50" width="40" height="20" rx="4" fill="#00ffc6"/>
+                        <!-- Pins -->
+                        <rect x="40" y="35" width="20" height="6" rx="3" fill="#00ffc6" class="mcu-pin" data-tooltip="UART TX"/>
+                        <rect x="40" y="79" width="20" height="6" rx="3" fill="#00ffc6" class="mcu-pin" data-tooltip="UART RX"/>
+                        <rect x="260" y="35" width="20" height="6" rx="3" fill="#00ffc6" class="mcu-pin" data-tooltip="SPI SCK"/>
+                        <rect x="260" y="79" width="20" height="6" rx="3" fill="#00ffc6" class="mcu-pin" data-tooltip="I2C SDA"/>
+                        <!-- Pin tooltips will be handled by JS -->
+                    </svg>
+                    <div id="mcu-tooltip" class="mcu-tooltip"></div>
                 </div>
             </div>
         </section>
-        <!-- Projects Preview -->
+        <!-- Projects Preview with Interactive Cards -->
         <section class="projects-preview" id="projects">
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">🔊</div>
-                        <h3>Audio DSP Module</h3>
-                        <p>Real-time audio processing in C++ for embedded speakers.</p>
+                    <div class="project-card interactive-card">
+                        <div class="project-front">
+                            <div class="project-icon">🔊</div>
+                            <h3>Audio DSP Module</h3>
+                            <p>Real-time audio processing in C++ for embedded speakers.</p>
+                        </div>
+                        <div class="project-back">
+                            <pre><code>// C++: FIR filter
+float fir(float* x, float* h, int N) {
+  float y = 0;
+  for(int i=0;i<N;i++) y += x[i]*h[i];
+  return y;
+}</code></pre>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon">🛡️</div>
-                        <h3>Static Analysis Automation</h3>
-                        <p>Automated static code analysis for embedded C/C++ projects.</p>
+                    <div class="project-card interactive-card">
+                        <div class="project-front">
+                            <div class="project-icon">🛡️</div>
+                            <h3>Static Analysis Automation</h3>
+                            <p>Automated static code analysis for embedded C/C++ projects.</p>
+                        </div>
+                        <div class="project-back">
+                            <pre><code>// Python: Static check
+for file in files:
+  if 'TODO' in open(file).read():
+    print(f"Warning: TODO in {file}")</code></pre>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon">📡</div>
-                        <h3>IoT Sensor Node</h3>
-                        <p>Low-power STM32 sensor node with FreeRTOS and MQTT.</p>
+                    <div class="project-card interactive-card">
+                        <div class="project-front">
+                            <div class="project-icon">📡</div>
+                            <h3>IoT Sensor Node</h3>
+                            <p>Low-power STM32 sensor node with FreeRTOS and MQTT.</p>
+                        </div>
+                        <div class="project-back">
+                            <pre><code>// STM32: FreeRTOS task
+void vTask(void* pv) {
+  for(;;) {
+    read_sensor();
+    vTaskDelay(100);
+  }
+}</code></pre>
+                        </div>
                     </div>
                 </div>
                 <a href="projects.html" class="cta-button secondary">See All Projects</a>
